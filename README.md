@@ -1,29 +1,40 @@
 # 🎬 SmartCine - Sistema de Gestão de Cinema
 
-[cite_start]**Projeto Final (NP2) - C06 Programação Orientada a Objetos** [cite: 1, 2]  
+**Projeto Final (NP2) - C06 Programação Orientada a Objetos**  
 **Instituição:** Inatel (Instituto Nacional de Telecomunicações)  
-[cite_start]**Professor:** Christopher Lima   
+**Professor:** Christopher Lima
 
 ---
 
 ## 📌 Sobre o Projeto
+
 O **SmartCine** é um sistema de gerenciamento de rede de cinemas desenvolvido em Java. O objetivo principal do software é controlar o cadastro de filmes e sessões, além de gerenciar a venda de ingressos (Inteira, Meia e VIP). O grande diferencial técnico é o tratamento de concorrência: o sistema simula múltiplos terminais tentando comprar o mesmo assento simultaneamente, garantindo a integridade dos dados e evitando vendas duplicadas.
 
-[cite_start]Este projeto visa solucionar um problema real de gerenciamento e logística de vendas [cite: 5][cite_start], aplicando rigorosamente os pilares da Orientação a Objetos[cite: 54].
+Este projeto visa solucionar um problema real de gerenciamento e logística de vendas, aplicando rigorosamente os pilares da Orientação a Objetos.
 
-## ⚙️ Requisitos Técnicos Aplicados
-O desenvolvimento deste sistema atende aos seguintes critérios de avaliação da disciplina:
+---
 
-- [x] [cite_start]**Boas Práticas:** Código limpo, modularização e nomes significativos[cite: 12, 15].
-- [x] [cite_start]**Estrutura Base:** Classes com atributos, métodos e construtores definidos[cite: 16, 17].
-- [x] [cite_start]**Herança & Polimorfismo:** Hierarquia de classes de ingressos com cálculos de valores sobrescritos[cite: 18, 19, 21, 22].
-- [x] [cite_start]**Classes Abstratas e Interfaces:** Contratos bem definidos para as entidades do cinema[cite: 24, 25].
-- [x] [cite_start]**Tratamento de Erros:** Exceções customizadas (ex: `AssentoIndisponivelException`) para prevenir falhas em tempo de execução[cite: 27, 28].
-- [x] [cite_start]**Persistência de Dados:** Uso de Banco de Dados (ou Arquivos) para salvar o histórico de vendas[cite: 30, 33].
-- [x] [cite_start]**Threads:** Uso de concorrência (`synchronized`) para simulação de vendas simultâneas[cite: 34, 35].
-- [ ] [cite_start]**UML Completo:** O diagrama arquitetural do sistema encontra-se na raiz do repositório[cite: 36, 37, 50]. *(Pendente)*
+## ⚙️ Critérios de Avaliação
+
+O desenvolvimento deste sistema atende aos 11 critérios oficiais de avaliação da disciplina:
+
+- [x] **01 - Boas Práticas:** Código organizado com nomes significativos, modularização e convenções da linguagem Java (pacotes, encapsulamento, separação de responsabilidades).
+- [x] **02 - Classes:** Entidades do sistema (`Filme`, `Sessao`, `Ingresso`, `Cinema`, etc.) com membros, métodos e construtores bem definidos.
+- [x] **03 - Herança:** Hierarquia de ingressos — `Ingresso` → `IngressoInteira`, `IngressoMeia`, `IngressoVIP` — utilizando herança para reaproveitamento de código.
+- [x] **04 - Polimorfismo:** Sobrescrita do método de cálculo de preço em cada subclasse de ingresso, com comportamento distinto demonstrável em tempo de execução.
+- [x] **05 - Interfaces e Classes Abstratas:** Classe abstrata base para `Ingresso` e interfaces para operações de venda e relatório — ambas obrigatoriamente presentes no código.
+- [x] **06 - Tratamento de Erros:** Exceções customizadas (ex: `AssentoIndisponivelException`, `SessaoNaoEncontradaException`) para tratamento robusto de erros em tempo de execução.
+- [x] **07 - Arquivos ou Banco de Dados:** Leitura e escrita de arquivos via `java.nio` para persistência do histórico de vendas e cadastros.
+- [x] **08 - Threads:** Simulação de múltiplos terminais de venda com concorrência controlada via `synchronized`, evitando venda duplicada de assentos.
+- [ ] **09 - UML Completo:** Diagrama UML completo da solução disponível na raiz do repositório. *(Pendente)*
+- [x] **10 - Repositório:** Projeto hospedado e versionado no GitHub.
+- [x] **11 - Relevância ao Curso:** Projeto voltado à área de Engenharia de Software, simulando um sistema real de gestão e automação de vendas.
+
+---
 
 ## 🚀 Como Executar
+
 1. Clone o repositório para sua máquina local:
    ```bash
-   git clone [https://github.com/NeitanAcosta/Projeto-C06---2026.git](https://github.com/NeitanAcosta/Projeto-C06---2026.git)
+   git clone https://github.com/NeitanAcosta/Projeto-C06---2026.git
+   ```
